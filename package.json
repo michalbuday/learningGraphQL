@@ -1,0 +1,17 @@
+{
+  "name": "articles",
+  "version": "1.0.0",
+  "description": "simple API using GraphQL for App displaying articles",
+  "main": "server.js",
+  "scripts": {
+    "dev:server": "nodemon server.js"
+  },
+  "author": "Mike",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.1",
+    "nodemon": "^1.17.1"
+  }
+}
