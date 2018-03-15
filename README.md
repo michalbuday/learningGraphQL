@@ -1,3 +1,4 @@
 # learningGraphQL
 Backend of simple app.
-yarn start dev:server
+yarn run dev:server 
+yarn run json:server
