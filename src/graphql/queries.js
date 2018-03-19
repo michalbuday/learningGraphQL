@@ -16,7 +16,7 @@ const RootQuery = new GraphQLObjectType({
         id: { type: GraphQLInt }
       },
       resolve(parentValue, args) {
-        async function getArticleById(id) {
+        const getArticleById = async (id) => {
           try {
             const response = await axios.get('http://localhost:8080/articles/' + id);
             return response.data;
@@ -30,7 +30,7 @@ const RootQuery = new GraphQLObjectType({
     articles: {
       type: new GraphQLList(ArticleType),
       resolve(parentValue, args) {
-        async function getArticles() {
+        const getArticles = async () => {
           try {
             const response = await axios.get('http://localhost:8080/articles');
             return response.data;

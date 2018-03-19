@@ -17,7 +17,7 @@ const mutation = new GraphQLObjectType({
       },
       resolve(parentValue, args) {
         let views = args.views + 1; //for some reason args.views++ or views++ is not working
-        async function addViewToArticle(id, views) {
+        const addViewToArticle = async (id, views) => {
           try {
             const response = await axios.patch('http://localhost:8080/articles/' + id, {
               views: views
